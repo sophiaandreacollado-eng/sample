@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-sky-300">
+    <div class=" flex flex-col items-center lg: flex block sm:flex md:flex">
+        <h1 class="mt-20">
+            <span class="font-bold text-[120px] text-black">Tic</span>
+            <span class="font-bold text-[100px] text-indigo-600">Tac</span>
+            <span class="font-bold text-[120px] text-black">Toe</span>
+        </h1>
+        <div class="flex justify-center mt-15"></div>
+        <div class="grid grid-cols-3 grid-rows-3 space-x-2 space-y-2 bg-sky-300 pl-2 pt-2 " onclick="clickBoard(event)">
+            <div>
+                <button class="border bg-violet-300 w-50 h-50 hover:bg-gray-800 rounded-xl hover:scale-110 text-8xl font-bold"></button>
+            </div>
+            <div>
+                <button class="border bg-violet-300 w-50 h-50 hover:bg-gray-800 rounded-xl hover:scale-110 text-8xl font-bold"></button>
+            </div>
+            <div>
+                <button class="border bg-violet-300 w-50 h-50 hover:bg-gray-800 rounded-xl hover:scale-110 text-8xl font-bold"></button>
+            </div>
+            <div>
+                <button class="border bg-violet-300 w-50 h-50 hover:bg-gray-800 rounded-xl hover:scale-110 text-8xl font-bold"></button>
+            </div>
+            <div>
+                <button class="border bg-violet-300 w-50 h-50 hover:bg-gray-800 rounded-xl hover:scale-110 text-8xl font-bold"></button>
+            </div>
+            <div>
+                <button class="border bg-violet-300 w-50 h-50 hover:bg-gray-800 rounded-xl hover:scale-110 text-8xl font-bold"></button>
+            </div>
+            <div>
+                <button class="border bg-violet-300 w-50 h-50 hover:bg-gray-800 rounded-xl hover:scale-110 text-8xl font-bold"></button>
+            </div>
+            <div>
+                <button class="border bg-violet-300 w-50 h-50 hover:bg-gray-800 rounded-xl hover:scale-110 text-8xl font-bold"></button>
+            </div>
+            <div>
+                <button class="border bg-violet-300 w-50 h-50 hover:bg-gray-800 rounded-xl hover:scale-110 text-8xl font-bold"></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let turn = 'X'
+        function clickBoard(e) {
+
+            var btn = e.target
+
+            if (btn.tagName === 'BUTTON' && btn.textContent === '') {
+
+                btn.textContent = turn;
+            } if (turn === 'X') {
+                turn = 'O';
+            } else {
+                turn = 'X'
+            }
+        }
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
